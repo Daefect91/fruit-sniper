@@ -4,8 +4,10 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Events;
 
+//ABSTRACTION
 public abstract class ShootableObject : MonoBehaviour
 {
+    //ENCAPSULATION
     protected PlayerController playerController;
     protected GameManager gameManager;
     protected readonly float outOfBoundsY = -18.0f;

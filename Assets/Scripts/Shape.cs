@@ -3,11 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+//INHERITANCE
 public class Shape : ShootableObject, IShootableObject
 {
     public AudioClip clickShapeAudioClip;
     private readonly int pointsValue = 50;
 
+    //POLYMORPHISM
     protected override void Update() 
     {
         if (transform.position.y < outOfBoundsY)
@@ -26,6 +28,7 @@ public class Shape : ShootableObject, IShootableObject
         ps.Play();
     } 
 
+    //POLYMORPHISM
     protected override void DestroyShootableObject()
     {
         PlayAnimation();

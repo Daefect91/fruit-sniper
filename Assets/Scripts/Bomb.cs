@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//INHERITANCE
 public class Bomb : ShootableObject, IShootableObject
 {
     public AudioClip clickBombAudioClip;
@@ -19,6 +20,7 @@ public class Bomb : ShootableObject, IShootableObject
         ps.Play();
     }
 
+    //POLYMORPHISM
     protected override void DestroyShootableObject()
     {
         PlayAnimation();

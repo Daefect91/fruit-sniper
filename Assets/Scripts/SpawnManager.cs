@@ -7,6 +7,7 @@ using Random = UnityEngine.Random;
 public class SpawnManager : MonoBehaviour
 {
     public GameObject[] objectPrefabs;
+    //ENCAPSULATION
     private readonly float spawnDelay = 2;
     private readonly float spawnInterval = 1.5f;
     private readonly float forceUp = 25.0f;

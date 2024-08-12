@@ -121,6 +121,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9af705c678be0740a65146678da71ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  onDestroyed:
+    m_PersistentCalls:
+      m_Calls: []
+  clickShapeAudioClip: {fileID: 8300000, guid: 29bde6326b4c34ad8a12da475f79b50a, type: 3}
 --- !u!54 &6205887830866499985
 Rigidbody:
   m_ObjectHideFlags: 0

@@ -10,6 +10,7 @@ public class GameManager : MonoBehaviour
     public TextMeshProUGUI scoreText;
     public TextMeshProUGUI highscoreText;
     public GameObject gameOverPanel;
+    public AudioClip newHighScoreAudioClip;
     public bool gameOver = false;
     public int score;
     private NavigationManager navigationManager;
@@ -43,6 +44,7 @@ public class GameManager : MonoBehaviour
         if (ScoreManager.Instance.highScore < score)
         {
             highscoreText.gameObject.SetActive(true);
+            MusicPlayer.Instance.PlayAudioClip(newHighScoreAudioClip);
             ScoreManager.Instance.highScorePlayerName = ScoreManager.Instance.playerName;
             ScoreManager.Instance.highScore = score;
             ScoreManager.Instance.SaveHighScoreData();

@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class MusicPlayer : MonoBehaviour
 {
+    private AudioSource mainAudioSource;
+
     private void Awake()
     {
         if (Instance != null)
@@ -12,7 +14,13 @@ public class MusicPlayer : MonoBehaviour
             return;
         }
         Instance = this;
+        mainAudioSource = GetComponent<AudioSource>();
         DontDestroyOnLoad(gameObject);
+    }
+
+    public void PlayAudioClip(AudioClip clip)
+    {
+        mainAudioSource.PlayOneShot(clip);
     }
 
     public static MusicPlayer Instance { get; private set; }

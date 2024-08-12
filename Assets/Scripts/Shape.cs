@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class Shape : ShootableObject, IShootableObject
 {
+    public AudioClip clickShapeAudioClip;
     private readonly int pointsValue = 50;
 
     protected override void Update() 
@@ -28,6 +29,7 @@ public class Shape : ShootableObject, IShootableObject
     protected override void DestroyShootableObject()
     {
         PlayAnimation();
+        MusicPlayer.Instance.PlayAudioClip(clickShapeAudioClip);
         base.DestroyShootableObject();
         onDestroyed.Invoke(pointsValue);
     }

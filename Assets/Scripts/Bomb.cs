@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Bomb : ShootableObject, IShootableObject
 {
+    public AudioClip clickBombAudioClip;
     private readonly int pointsValue = -100;
 
     public void UpdateScore()
@@ -21,6 +22,7 @@ public class Bomb : ShootableObject, IShootableObject
     protected override void DestroyShootableObject()
     {
         PlayAnimation();
+        MusicPlayer.Instance.PlayAudioClip(clickBombAudioClip);
         playerController.gameObject.SetActive(false);
         gameManager.GameOver();
         base.DestroyShootableObject();

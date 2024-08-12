@@ -1499,6 +1499,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerNameInput: {fileID: 0}
+  bestScoreText: {fileID: 0}
   scoreText: {fileID: 323788485}
   highscoreText: {fileID: 13515087}
   gameOverPanel: {fileID: 493553091}

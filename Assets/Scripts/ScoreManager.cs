@@ -50,7 +50,7 @@ public class ScoreManager : MonoBehaviour
             highScorePlayerName = highScoreData.highScorePlayerName;
             highScore = highScoreData.highScore;
         }
-        if (highScorePlayerName != null && !highScorePlayerName.Equals(""))
+        if (highScorePlayerName != null && !highScorePlayerName.Equals("") && bestScoreText != null)
         {
             bestScoreText.text = "Best Score: " + highScorePlayerName + " - " + highScore;
         }
